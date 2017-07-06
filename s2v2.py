@@ -1,12 +1,16 @@
-import numpy
- 
-FIELDNAMES = ['', 'id', 'priceLabel', 'name', 'brandId', 'brandName', 'imageLink', 'desc', 'vendor', 'patterned', 'material']
-DATATYPES = [('myint', 'a'), ('myid', 'i'), ('price', 'f8'), ('name', 'a200'), ('brandId', '<i8'), ('brandName', 'a200'), ('imageUrl', '|S500'), ('description', '|900'), ('vendor', '|S100'), ('pattern', '|S50'), ('material', '|S500')]
+from s2v1 import *
 
-def load_data(filename):
-  my_csv = numpy.genfromtxt(filename, delimiter='\t', skip_header=1, names=FIELDNAMES, invalid_raise=False, dtype=DATATYPES)
-  return my_csv
+def number_of_records(data_sample):
+    return len(data_sample)
 
-sample_file = 'data.csv'
-my_csv = load_data(sample_file)
-print(my_csv[0])
+number_of_ties = number_of_records(data_from_csv) -1
+
+print(number_of_ties, "ties in our data sample")
+
+def number_of_records2(data_sample):
+    return data_sample.size
+
+number_of_ties_my_csv = number_of_records2(my_csv)
+print(number_of_ties_my_csv, "ties in our data sample")
+
+
