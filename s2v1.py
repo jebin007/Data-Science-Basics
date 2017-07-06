@@ -23,4 +23,4 @@ def load_data(filename, d='\t'):
 
 sample_file = 'data.csv'
 my_csv = load_data(sample_file)
-print(my_csv[0])
+#print(my_csv[0])
