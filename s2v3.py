@@ -27,7 +27,7 @@ my_sum = calc_numpy_sum(price)
 
 
 
-print("1.", (calculate_sum(data_from_csv)))
-print("2.", (calculate_sum_succinct(data_from_csv)))
-print("3.", (calculate_sum_concise(data_from_csv)))
-print("4. The sum (numpy):", my_sum)
+#print("1.", (calculate_sum(data_from_csv)))
+#print("2.", (calculate_sum_succinct(data_from_csv)))
+#print("3.", (calculate_sum_concise(data_from_csv)))
+#print("4. The sum (numpy):", my_sum)
