@@ -1,3 +1,5 @@
+#Calculating total and averages
+
 from s2v3 import *
 
 def find_average(data_sample, header=False):
@@ -11,8 +13,8 @@ def find_average(data_sample, header=False):
 average_price = find_average(data_from_csv, True)
 midpoint = round(number_of_ties / 2)
 message = "Average of {} half = ${:03.2f}" #{:03.2f} is formatting decimal upto two places
-print (message.format("1st", find_average(data_from_csv[:midpoint], True)))
-print (message.format("2nd", find_average(data_from_csv[:midpoint], False)))
+#print (message.format("1st", find_average(data_from_csv[:midpoint], True)))
+#print (message.format("2nd", find_average(data_from_csv[:midpoint], False)))
 #print("Average = ", average_price)
 #print('{:03.2f}' .format(average_price)) #format upto two demical places
 
