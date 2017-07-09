@@ -52,5 +52,5 @@ def filter_col_by_float(data_sample, field, direction, filter_condition):
     return filtered_rows
 
 under_20_bucks = filter_col_by_float(data_from_csv, "priceLabel", "<=", 20)
-print("Found {} ties < $20".format(number_of_records(under_20_bucks)))
+#print("Found {} ties < $20".format(number_of_records(under_20_bucks)))
 
