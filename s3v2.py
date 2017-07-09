@@ -1,6 +1,6 @@
 from s3v1 import *
 
-def filter_col_by_by_string(data_sample, field, filter_condition):
+def filter_col_by_string(data_sample, field, filter_condition):
     filtered_rows = []
 
     col = int(data_sample[0].index(field))
@@ -11,16 +11,16 @@ def filter_col_by_by_string(data_sample, field, filter_condition):
             filtered_rows.append(item)
     return filtered_rows
 
-silk_ties = filter_col_by_by_string(data_from_csv, "material", "_silk")
+silk_ties = filter_col_by_string(data_from_csv, "material", "_silk")
 #print("Found {} silk ties".format(len(silk_ties)))
 
-wool_ties = filter_col_by_by_string(data_from_csv, "material", "_wool")
+wool_ties = filter_col_by_string(data_from_csv, "material", "_wool")
 #print("Found {} wool ties".format(len(wool_ties)))
 
-cotton_ties = filter_col_by_by_string(data_from_csv, "material", "_cotton")
+cotton_ties = filter_col_by_string(data_from_csv, "material", "_cotton")
 #print("Found {} cotton ties".format(len(cotton_ties)))
 
-gucci_ties = filter_col_by_by_string(data_from_csv, "brandName", "Gucci")
+gucci_ties = filter_col_by_string(data_from_csv, "brandName", "Gucci")
 #print("Found {} Gucci ties".format(len(gucci_ties)))
 
 def filter_col_by_float(data_sample, field, direction, filter_condition):

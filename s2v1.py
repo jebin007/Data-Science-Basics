@@ -1,10 +1,10 @@
 import csv
 import numpy
 
-def open_with_csv(filename):
+def open_with_csv(filename, d='\t'):
   data = []
   with open(filename, encoding='utf-8') as tsvin:
-    tie_reader = csv.reader(tsvin, delimiter='\t')
+    tie_reader = csv.reader(tsvin, delimiter=d)
     for row in tie_reader:
       data.append(row)
   return data
